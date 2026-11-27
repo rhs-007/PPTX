@@ -1,0 +1,182 @@
+{
+  "name": "default",
+  "description": "Old DL lesson decks (Phonics / Reading / Writing, English and Spanish) -> new DL templates. Rules learned from the Phonics sample and the old decks of all three strands.",
+  "families": {
+    "opening_layout": "Opening Slide|^Title Slide$",
+    "outcomes1_layout": "(Learning|Lesson) Outcomes? 1",
+    "outcomes2_layout": "(Learning|Lesson) Outcomes? 2",
+    "outcomes_text": "^\\s*(in this lesson|en esta lecci[oó]n)\\s*:?\\s*$",
+    "outcomes2_text": "(did you meet|lograste)",
+    "opening_new": [
+      "Opening Slide",
+      "@first"
+    ],
+    "outcomes1_new": [
+      "Lesson Outcomes 1"
+    ],
+    "outcomes2_new": [
+      "Lesson Outcomes 2"
+    ]
+  },
+  "map_drop_non_text": true,
+  "title_style": {
+    "split_at": "|",
+    "after_split_rpr": {
+      "b": "0"
+    }
+  },
+  "time_pattern": "\\s*(\\(\\s*\\d+(?:\\s*[-–]\\s*\\d+)?\\s*min\\.?\\s*\\))\\s*$",
+  "base_fonts": [
+    "Century Gothic",
+    "MS PGothic",
+    "Arial",
+    "Verdana",
+    "Calibri"
+  ],
+  "drop_slide_background": false,
+  "designer_notes": "under_collaborate",
+  "designer_note_regex": "(?i)(art\\s*-?\\s*spec|artspec|for\\s+print|print\\s+trs|\\bdsn\\b|\\btrs\\s*#|please\\s+(add|insert|update|place|use|crop|replace|delete|remove|make)\\b|\\binsert\\b.{0,40}\\b(video|image|photo|slide|cover|page|card)s?\\b|^\\s*x\\d{4,}\\s*$|\\bvideo of\\b|\\bredux\\b|\\bboilerplate\\b|^\\s*(edit|editor'?s?\\s+note|note\\s+to\\s+(dsn|design))\\s*:)",
+  "labels": {
+    "en": {
+      "outcomes": "Learning Outcomes",
+      "teach": "Teach",
+      "student": "Collaborate"
+    },
+    "es": {
+      "outcomes": "Objetivos de aprendizaje",
+      "teach": "Enseñar",
+      "student": "Colaborar"
+    }
+  },
+  "panel": {
+    "old_roles": {
+      "title": "header",
+      "10": "header",
+      "11": "objective",
+      "19": "student",
+      "15": "teacher",
+      "17": "routine",
+      "13": "body",
+      "1": "body",
+      "12": "subheader",
+      "20": "annos",
+      "18": "dnote",
+      "21": "dnote",
+      "22": "time_alt"
+    },
+    "roles_by_name": {
+      "^top_bar_box": "header",
+      "^learning_outcome_box": "objective",
+      "^student_box": "student",
+      "^teacher_box": "teacher",
+      "^routine_box": "routine",
+      "^bg object": "decor"
+    },
+    "dnote_placeholders": [
+      "18",
+      "21",
+      "22"
+    ],
+    "regions": {
+      "objective": "11",
+      "student": "19",
+      "teacher": "15"
+    },
+    "old_objective_in": [
+      1.69,
+      0.41,
+      8.79,
+      0.82
+    ],
+    "old_content_frame_in": [
+      1.69,
+      1.34,
+      8.79,
+      5.92
+    ],
+    "old_frames_in": [
+      [
+        2.34,
+        1.04,
+        8.62,
+        5.53
+      ],
+      [
+        1.74,
+        1.3,
+        8.74,
+        5.91
+      ]
+    ],
+    "right_column_split_in": 4.9,
+    "routine_min_top_in": 3.0,
+    "new_placeholders": {
+      "time": "12",
+      "outcomes": "11",
+      "student": "10",
+      "routine": "18"
+    },
+    "levels": {
+      "outcomes_heading": 0,
+      "objective": 1,
+      "teach_heading": 2,
+      "teacher": 4,
+      "student_heading": 0,
+      "student": 1,
+      "routine_heading": 0,
+      "routine": 1
+    },
+    "respect_old_no_bullet": {
+      "objective": false,
+      "teacher": true,
+      "student": true,
+      "map": false,
+      "body": true
+    },
+    "layouts": [
+      {
+        "old_layout": "Numbered List with annos",
+        "needs": "body",
+        "new_layout": "Number List With Annos Annos"
+      },
+      {
+        "old_layout": "Numbered List",
+        "needs": "body",
+        "new_layout": "Number List No Annos"
+      },
+      {
+        "old_layout": "Bulleted List",
+        "needs": "body|subheader",
+        "new_layout": "Header and Bullet List"
+      },
+      {
+        "old_layout": "Header",
+        "needs": "body|subheader",
+        "new_layout": "Header and Body Text"
+      },
+      {
+        "old_layout": ".*",
+        "needs": "subheader",
+        "new_layout": "Header and Body Text"
+      },
+      {
+        "old_layout": ".*",
+        "needs": "body",
+        "new_layout": "Body Text"
+      },
+      {
+        "old_layout": ".*",
+        "new_layout": "Image only"
+      }
+    ],
+    "content_inset_in": 0.1,
+    "allow_upscale": false
+  },
+  "metrics": {
+    "font_family": "Century Gothic",
+    "line_factor": 1.2
+  },
+  "output_name": "NEW_{stem}",
+  "strand_keywords": {},
+  "designer_note_red_regex": "(?i)(update|crop|redux|replace|\\bTE\\b|print|art|design|insert|please)"
+}
