@@ -1,0 +1,1 @@
+from ppt_migrator.webapp import Handler as handler
