@@ -1,0 +1,2 @@
+[tool.vercel]
+entrypoint = "ppt_migrator.webapp:Handler"
